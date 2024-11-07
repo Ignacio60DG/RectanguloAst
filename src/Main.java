@@ -6,6 +6,8 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         System.out.println("Dime de cuantos asteríscos quieres que tenga el cateto menor de tu triangulo");
         int rectangulo= sc.nextInt();
+        int rectanguloOriginal= rectangulo;
+        int original = rectangulo;
         int Contador= 0;
         if(rectangulo>=0){
             while(rectangulo != 0) {
@@ -18,7 +20,16 @@ public class Main {
                 System.out.println();
             }
         }else{
-            System.out.println("Iva a ponerme gracioso y poner el triangulo al reves pero mejor decirte que no se puede con numeros negativos");
+            while(rectangulo != 0) {
+                rectangulo++;
+                while(original != rectangulo) {
+                    System.out.print("*");
+                    original++;
+                }
+                original = rectanguloOriginal;
+                System.out.println();
+            }
+            System.out.println("Me puse gracioso");
         }
     }
 }
